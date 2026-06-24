@@ -42,7 +42,8 @@
         "release": "standard-version",
         "prepare": "husky",
         "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
+        "lint:fix": "eslint . --fix",
+        "lint:scss": "stylelint '**/*.scss'"
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
@@ -73,6 +74,9 @@
         "postcss": "^8.5.15",
         "prettier": "^3.8.4",
         "standard-version": "^9.5.0",
+        "stylelint": "^17.13.0",
+        "stylelint-config-prettier": "^9.0.5",
+        "stylelint-config-standard-scss": "^17.0.0",
         "ts-jest": "^29.4.11",
         "tsconfig-paths": "^4.2.0",
         "typescript": "^6.0.3",
@@ -83,7 +87,11 @@
             "eslint --fix",
             "prettier --write"
         ],
-        "*.{js,jsx,json,css,scss,md}": [
+        "*.scss": [
+            "stylelint --fix",
+            "prettier --write"
+        ],
+        "*.{js,jsx,json,css,md}": [
             "prettier --write"
         ]
     }
