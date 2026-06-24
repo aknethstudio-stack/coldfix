@@ -1,0 +1,88 @@
+{
+    "name": "cold-fix",
+    "title": "ColdFix (by AKNETH Studio)",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "author": {
+        "name": "AKNETH Studio Katarzyna Pawłowska-Malesa",
+        "email": "akneth.studio@gmail.com",
+        "url": "https://akneth-studio.vercel.app"
+    },
+    "license": "CC-BY4.0",
+    "engines": {
+        "node": "22.x"
+    },
+    "devEngines": {
+        "runtime":{
+            "name": "node",
+            "onFail": "download"
+        },
+        "packageManager":{
+            "name": "npm",
+            "version": ">=10.0.0",
+            "onFail": "warn"
+        },
+        "os":{
+            "name": "win32",
+            "onFail": "warn"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aknethstudio-stack/coldfix.git"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "format": "prettier --write .",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "release": "standard-version",
+        "prepare": "husky",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.8",
+        "next": "^16.2.9",
+        "react": "^19.2.7",
+        "react-bootstrap": "^2.10.10",
+        "react-dom": "^19.2.7",
+        "react-icons": "^5.6.0",
+        "sass": "^1.101.0"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
+        "@testing-library/user-event": "^14.6.1",
+        "@types/bootstrap": "^5.2.11",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^25.9.3",
+        "@types/react": "^19.2.17",
+        "@types/react-dom": "^19.0.2",
+        "autoprefixer": "^10.5.0",
+        "eslint": "^9.21.0",
+        "eslint-config-next": "^16.2.9",
+        "husky": "^9.1.7",
+        "jest": "^30.4.2",
+        "jest-environment-jsdom": "^30.4.1",
+        "postcss": "^8.5.15",
+        "prettier": "^3.8.4",
+        "standard-version": "^9.5.0",
+        "ts-jest": "^29.4.11",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.61.0"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{js,jsx,json,css,scss,md}": [
+            "prettier --write"
+        ]
+    }
+}

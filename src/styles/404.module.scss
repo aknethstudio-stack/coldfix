@@ -1,0 +1,41 @@
+@use './variables.module.scss' as *;
+
+.error-page {
+  h1,
+  h5 {
+    font-weight: 700;
+  }
+}
+
+.error-page-container {
+  height: 100dvh;
+}
+
+.button-container {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: #fff !important;
+  transition: 0.3s;
+}
+
+.button-container:hover,
+.button-container:focus,
+.button-container:active {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.image-mask {
+  display: inline-block;
+  max-width: 100%;
+  -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M 41.08 26.27 C 40.79 30.60 45.97 34.26 44.81 37.66 C 43.67 40.98 38.59 42.91 35.13 43.68 C 31.94 44.39 28.48 42.34 25.08 42.06 C 21.96 41.80 19.92 43.10 15.94 42.10 C 12.57 41.26 7.66 40.72 5.99 37.29 C 4.21 33.61 8.88 31.20 8.25 26.27 C 7.61 21.16 1.51 18.58 2.98 13.51 C 4.41 8.62 9.69 9.18 13.90 6.89 C 17.44 4.97 20.75 1.07 25.08 1.48 C 29.66 1.91 31.50 6.77 35.12 8.88 C 39.20 11.27 44.75 9.09 46.41 13.95 C 47.97 18.49 41.39 21.66 41.08 26.27 Z" fill="%23808"></path></svg>');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M 41.08 26.27 C 40.79 30.60 45.97 34.26 44.81 37.66 C 43.67 40.98 38.59 42.91 35.13 43.68 C 31.94 44.39 28.48 42.34 25.08 42.06 C 21.96 41.80 19.92 43.10 15.94 42.10 C 12.57 41.26 7.66 40.72 5.99 37.29 C 4.21 33.61 8.88 31.20 8.25 26.27 C 7.61 21.16 1.51 18.58 2.98 13.51 C 4.41 8.62 9.69 9.18 13.90 6.89 C 17.44 4.97 20.75 1.07 25.08 1.48 C 29.66 1.91 31.50 6.77 35.12 8.88 C 39.20 11.27 44.75 9.09 46.41 13.95 C 47.97 18.49 41.39 21.66 41.08 26.27 Z" fill="%23808"></path></svg>');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}

@@ -1,0 +1,146 @@
+@use './variables.module' as *;
+
+// Import Bootstrap SCSS via explicit relative path to node_modules
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+  --color-bg: #{$color-bg};
+  --color-text: #{$color-text};
+  --navbar-bg: #{$color-primary};
+  --navbar-text: #{$color-bg};
+  --navbar-accent: #{$color-accent};
+}
+
+.navbar-custom {
+  background-color: var(--navbar-bg) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: var(--navbar-text) !important;
+}
+.navbar-custom .nav-link.active {
+  color: var(--navbar-accent) !important;
+  border-bottom: 2px solid var(--navbar-accent);
+}
+.navbar-custom .btn-primary {
+  background-color: var(--navbar-accent);
+  border-color: var(--navbar-accent);
+  color: #fff;
+}
+.navbar-custom .btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+/* CTA button using project mixin */
+.btn-cta {
+  @include cta-button;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navbar-custom .btn-cta {
+  /* ensure contrast on navbar */
+  background-color: var(--navbar-accent) !important;
+  color: #fff !important;
+}
+
+/* Body padding is set dynamically by the Navbar component to match its height */
+
+/* Brand text next to logo */
+.brand-text {
+  font-family: var(--font-brand), cursive;
+  color: var(--navbar-text) !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.1;
+
+  .brand-subtext {
+    font-size: 0.65rem;
+    font-weight: 400;
+    opacity: 0.8;
+    display: block;
+  }
+}
+
+/* Ensure anchors inside the brand and nav links are not underlined
+   and inherit the navbar text color. Covers cases where Link
+   renders an <a> inside the brand (avoids nested-anchor visual issues). */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand a,
+.navbar-custom .navbar-brand a img,
+.navbar-custom .navbar-brand a span,
+.navbar-custom .nav-link,
+.navbar-custom .nav-link a {
+  color: var(--navbar-text) !important;
+  text-decoration: none !important;
+}
+
+.navbar-custom .navbar-brand a img {
+  vertical-align: middle;
+}
+
+footer {
+  color: #fff;
+
+  .container-md {
+    // border: 1px solid #fff;
+
+    .align-items-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .nav {
+        justify-content: flex-end;
+        width: 100%;
+
+        .nav-link {
+          padding: 0 0.5rem;
+          color: #fff !important;
+          text-decoration: none !important;
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: var(--navbar-accent) !important;
+          }
+        }
+      }
+    }
+
+    .align-items-left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .align-items-left,
+      .align-items-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .align-items-right {
+        .nav-link {
+          padding: auto;
+        }
+        .nav {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

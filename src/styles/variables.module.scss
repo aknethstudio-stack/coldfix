@@ -1,0 +1,21 @@
+// SCSS variables and mixins for the project
+$color-primary: #1b263b; // Granat
+$color-secondary: #415a77; // Niebieski szary
+$color-accent: #f3722c; // Pomarańcz (CTA)
+$color-bg: #f8f9fa; // Jasne tło
+$color-text: #0d1b2a; // Ciemny tekst
+
+$font-main: 'Fira Sans', sans-serif;
+
+// Mixin dla przycisku akcji
+@mixin cta-button {
+  background-color: $color-accent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: filter 0.2s;
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
