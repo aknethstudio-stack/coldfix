@@ -39,7 +39,7 @@
         "format": "prettier --write .",
         "test": "jest",
         "test:coverage": "jest --coverage",
-        "release": "standard-version",
+        "release": "standard-version --skip.tag",
         "prepare": "husky",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
