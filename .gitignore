@@ -65,4 +65,7 @@ next-env.d.ts
 !.env.vault
 
 #Ignore vscode AI rules
-.github/instructions/codacy.instructions.md
+.github/instructions/
+
+# Internal documents
+/documents
