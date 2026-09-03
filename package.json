@@ -46,7 +46,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
-        "next": "^16.2.9",
+        "next": "^16.3.4",
         "react": "^19.2.7",
         "react-bootstrap": "^2.10.10",
         "react-dom": "^19.2.7",
@@ -70,7 +70,7 @@
         "husky": "^9.1.7",
         "jest": "^30.4.2",
         "jest-environment-jsdom": "^30.4.1",
-        "postcss": "^8.5.15",
+        "postcss": "^8.5.23",
         "prettier": "^3.8.4",
         "standard-version": "^9.5.0",
         "ts-jest": "^29.4.11",
